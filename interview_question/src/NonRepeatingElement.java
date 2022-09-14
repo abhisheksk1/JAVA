@@ -1,0 +1,22 @@
+public class NonRepeatingElement {
+    public static void main(String[] args) {
+        int arr[]={1,2,3,4,2,1};
+        System.out.println("Non Repeating Element are:- ");
+        nonRepeat(arr);
+    }
+    static void nonRepeat(int[] arr){
+        boolean check;
+        for(int i=0; i< arr.length; i++){
+            check=false;
+            for(int j=0; j<arr.length; j++){
+                if(i!=j && arr[i]==arr[j]){
+                    check=true;
+                    break;
+                }
+            }
+            if(!check){
+                System.out.print(arr[i]+" ");
+            }
+        }
+    }
+}
